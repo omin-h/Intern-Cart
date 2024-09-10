@@ -13,12 +13,15 @@ const SearchBar = ({ onSearch }) => {
   return (
     <div>
       <input
+        className="search-bar"
         type="text"
         value={searchInput}
         onChange={handleInputChange}
         placeholder="Search products..."
       />
     </div>
+
+    
   );
 };
 

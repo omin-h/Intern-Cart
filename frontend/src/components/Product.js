@@ -58,8 +58,8 @@ const Product = () => {
 
     return (
         <div className='fill'>
-            <h1>Shopping Cart</h1>
-            <SearchBar onSearch={handleSearch} />
+            <h2>Shopping Cart</h2>
+            <SearchBar className='search-bar' onSearch={handleSearch} />
 
             <div>
                 <h4>Categories</h4>
@@ -81,12 +81,12 @@ const Product = () => {
                         filteredProducts.map((product) => (
                             <li key={product.id}>
                                 <div className='prod'>
-                                    {product.name} | category: {product.category} | Price: ${product.price} 
+                                    {product.name} | category: {product.category} | Price: Rs.{product.price} | <img className='pr-img' src={product.image} alt={product.name} />
                                 </div>
                             </li>
                         ))
                     ) : (
-                        <p>No products found.</p>
+                        <h5>No products found!!</h5>
                     )}
                 </ul>
             </div>
