@@ -1,17 +1,14 @@
-/* Container styling */
 .fill {
-    margin-top: -30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #f6f6f6;
     font-family: 'Arial', sans-serif;
 }
 
-/* Category button styling */
 .category-button {
     margin: 10px;
     padding: 10px 20px;
@@ -25,19 +22,16 @@
     text-transform: capitalize;
 }
 
-/* Active category button */
 .category-button.active {
-    background-color: #007bff;
+    background-color: #08007a;
     transform: scale(1.05);
 }
 
-/* Hover effect on category buttons */
 .category-button:hover {
     background-color: #404040;
     transform: scale(1.02);
 }
 
-/* Products section */
 .prod {
     display: flex;
     justify-content: space-between;
@@ -54,13 +48,11 @@
     font-size: 1.1rem;
 }
 
-/* Hover effect for products */
 .prod:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
-/* Search bar and other elements */
 h2 {
     font-size: 1.9rem;
     color: #333;
@@ -85,7 +77,6 @@ ul {
     padding: 0;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .prod {
         width: 90%;

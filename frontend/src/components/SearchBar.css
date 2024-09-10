@@ -1,4 +1,3 @@
-/* Search Input Styling */
 .search-bar {
     width: 300px;
     padding: 12px 20px;
@@ -10,23 +9,19 @@
     outline: none;
 }
 
-/* Placeholder text color */
 .search-bar::placeholder {
     color: #888;
 }
 
-/* Hover and Focus Effect */
 .search-bar:focus {
     border-color: #007bff;
     box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
 }
 
-/* On Hover */
 .search-bar:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .search-bar {
         width: 80%;
