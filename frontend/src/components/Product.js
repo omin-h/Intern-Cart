@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar';
 import { getProducts } from '../services/productService';
+import './Product.css';
 
 const Product = () => {
     const [products, setProducts] = useState([]);
@@ -56,25 +57,17 @@ const Product = () => {
     };
 
     return (
-        <div>
+        <div className='fill'>
             <h1>Shopping Cart</h1>
             <SearchBar onSearch={handleSearch} />
 
-            {/* Category Buttons */}
             <div>
+                <h4>Categories</h4>
                 {categories.map((category) => (
                     <button
                         key={category}
                         onClick={() => handleCategorySelect(category)}
-                        style={{
-                            margin: '0 10px',
-                            padding: '10px',
-                            backgroundColor: selectedCategory === category ? 'blue' : 'gray',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '5px',
-                            cursor: 'pointer'
-                        }}
+                        className={`category-button ${selectedCategory === category ? 'active' : ''}`}
                     >
                         {category.charAt(0).toUpperCase() + category.slice(1)}
                     </button>
@@ -82,12 +75,14 @@ const Product = () => {
             </div>
 
             <div>
-                <h3>Products</h3>
+                <h4>Products</h4>
                 <ul>
                     {filteredProducts.length > 0 ? (
                         filteredProducts.map((product) => (
                             <li key={product.id}>
-                                {product.name} - {product.category} - ${product.price}
+                                <div className='prod'>
+                                    {product.name} | category: {product.category} | Price: ${product.price} 
+                                </div>
                             </li>
                         ))
                     ) : (

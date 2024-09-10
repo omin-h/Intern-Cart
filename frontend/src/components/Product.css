@@ -1,0 +1,96 @@
+/* Container styling */
+.fill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Category button styling */
+.category-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #5a5a5a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+/* Active category button */
+.category-button.active {
+    background-color: #007bff;
+    transform: scale(1.05);
+}
+
+/* Hover effect on category buttons */
+.category-button:hover {
+    background-color: #404040;
+    transform: scale(1.02);
+}
+
+/* Products section */
+.prod {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    background-color: white;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
+}
+
+/* Hover effect for products */
+.prod:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Search bar and other elements */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .prod {
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .category-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

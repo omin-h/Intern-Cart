@@ -27,6 +27,7 @@ const CategoryMenu = () => {
   }
 
   return (
+    
     <ul>
       {categories.map((category) => (
         <li key={category.id}>{category.name}</li>

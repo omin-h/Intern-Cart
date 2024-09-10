@@ -1,0 +1,42 @@
+/* Search Bar Container */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Search Input Styling */
+.search-bar input {
+    width: 300px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* Placeholder text color */
+.search-bar input::placeholder {
+    color: #888;
+}
+
+/* Hover and Focus Effect */
+.search-bar input:focus {
+    border-color: #007bff;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
+}
+
+/* On Hover */
+.search-bar input:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar input {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+}
