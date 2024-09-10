@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import CategoryMenu from './CategoryMenu';
 import SearchBar from './SearchBar';
 import { getProducts } from '../services/productService';
 
@@ -8,13 +7,18 @@ const Product = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchInput, setSearchInput] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]); 
+    const [categories, setCategories] = useState([]);
 
-    //fetch products from the service files
+    // Fetch products from the service files
     useEffect(() => {
         const loadProducts = async () => {
             const data = await getProducts();
             setProducts(data);
-            setFilteredProducts(data); 
+            setFilteredProducts(data);
+
+            // Extract unique categories from products
+            const uniqueCategories = ['all', ...new Set(data.map(product => product.category))];
+            setCategories(uniqueCategories);
         };
 
         loadProducts();
@@ -55,7 +59,28 @@ const Product = () => {
         <div>
             <h1>Shopping Cart</h1>
             <SearchBar onSearch={handleSearch} />
-            <CategoryMenu onCategorySelect={handleCategorySelect} />
+
+            {/* Category Buttons */}
+            <div>
+                {categories.map((category) => (
+                    <button
+                        key={category}
+                        onClick={() => handleCategorySelect(category)}
+                        style={{
+                            margin: '0 10px',
+                            padding: '10px',
+                            backgroundColor: selectedCategory === category ? 'blue' : 'gray',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '5px',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        {category.charAt(0).toUpperCase() + category.slice(1)}
+                    </button>
+                ))}
+            </div>
+
             <div>
                 <h3>Products</h3>
                 <ul>
