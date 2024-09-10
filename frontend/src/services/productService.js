@@ -2,7 +2,7 @@
 
 const getProducts = async () => {
     try{
-        const response = await fetch('http://localhost:5000/api/products');
+        const response = await fetch('http://localhost:3001/products');
 
         if(!response.ok){
             throw new Error('Server responded with an error!');

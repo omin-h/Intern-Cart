@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CategoryMenu from './CategoryMenu';
 import SearchBar from './SearchBar';
-import getProducts from '../services/productService';
+import { getProducts } from '../services/productService';
 
 const Product = () => {
     const [products, setProducts] = useState([]);
