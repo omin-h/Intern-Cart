@@ -7,14 +7,14 @@ const Product = () => {
     const [products, setProducts] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchInput, setSearchInput] = useState('');
-    const [filteredProducts, setFilteredProducts] = useState([]); // Renamed this to filteredProducts
+    const [filteredProducts, setFilteredProducts] = useState([]); 
 
     //fetch products from the service files
     useEffect(() => {
         const loadProducts = async () => {
             const data = await getProducts();
             setProducts(data);
-            setFilteredProducts(data); // Initialize with all products
+            setFilteredProducts(data); 
         };
 
         loadProducts();
@@ -23,17 +23,17 @@ const Product = () => {
     // Handle category selection
     const handleCategorySelect = (category) => {
         setSelectedCategory(category);
-        applyFilters(category, searchInput); // Updated to use applyFilters
+        applyFilters(category, searchInput);
     };
 
     // Handle search input
     const handleSearch = (term) => {
-        setSearchInput(term); // Update the search input state
-        applyFilters(selectedCategory, term); // Updated to use applyFilters
+        setSearchInput(term); 
+        applyFilters(selectedCategory, term); 
     };
 
     // Filter products based on category and search term
-    const applyFilters = (category, search) => { // Renamed the function to applyFilters
+    const applyFilters = (category, search) => { 
         let filtered = products;
 
         // Filter by category

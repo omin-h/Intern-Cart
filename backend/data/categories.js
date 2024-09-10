@@ -2,7 +2,7 @@
 const categories = [
     {
         id: '1',
-        name: 'Shirts',
+        name: 'shirts',
     },
 
     {
@@ -11,7 +11,7 @@ const categories = [
     },
     {
         id: '3',
-        name: 'Shoes',
+        name: 'shoes',
     },
    
 ];

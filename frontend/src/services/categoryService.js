@@ -10,7 +10,7 @@ const getCategories = async () => {
 
     }
     catch(error){
-        console.error(error);
+        console.error('Errorr fetching categories:', error);
         return null;
     }
    

@@ -1,9 +1,9 @@
 //Hard coded product data
 
 const products = [
-    { id: 1, name: 'Black T-shirt', category: 'Shirts', price: 2000 },
-    { id: 2, name: 'Blue T-shirt', category: 'trousers', price: 4000 },
-    { id: 3, name: 'Red T-shirt', category: 'Shoes', price: 6000 },
+    { id: '1', name: 'Black T-shirt', category: 'shirts', price: '2000' },
+    { id: '2', name: 'Blue trouser', category: 'trousers', price: '4000' },
+    { id: '3', name: 'Red shoe', category: 'shoes', price: '6000' },
   
 ];
 
