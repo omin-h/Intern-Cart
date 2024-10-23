@@ -2,8 +2,14 @@ import React from 'react'
 
 const Upper = () => {
   return (
-    <div>Upper</div>
-    
+    <div className='fill'>
+        <SearchBar onSearch={handleSearch} categories={categories} onCategorySelect={handleCategorySelect} />
+        <div className='product-container'>
+            {filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+            ))}
+        </div>
+    </div>
   )
 }
 
