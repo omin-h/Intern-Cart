@@ -8,7 +8,16 @@ const Upper = () => {
             {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
             ))}
+
         </div>
+
+        <div className='pagination'>
+            <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+            />
+            </div>
     </div>
   )
 }
