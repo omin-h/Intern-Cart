@@ -18,6 +18,14 @@ const Upper = () => {
             onPageChange={handlePageChange}
             />
             </div>
+
+            <div className='filter'>
+            <Filter
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onCategorySelect={handleCategorySelect}
+            />
+        </div>
     </div>
   )
 }
