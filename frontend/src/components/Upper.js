@@ -26,6 +26,10 @@ const Upper = () => {
             onCategorySelect={handleCategorySelect}
             />
         </div>
+
+        <div className='sort'>
+            <Sort onSort={handleSort} />
+        </div>
     </div>
   )
 }
