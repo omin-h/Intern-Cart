@@ -30,6 +30,11 @@ const Upper = () => {
         <div className='sort'>
             <Sort onSort={handleSort} />
         </div>
+
+        <div className='cart'>
+            <Cart cart={cart} onAddToCart={handleAddToCart} />
+
+        </div>
     </div>
   )
 }
