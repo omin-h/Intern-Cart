@@ -35,6 +35,10 @@ const Upper = () => {
             <Cart cart={cart} onAddToCart={handleAddToCart} />
 
         </div>
+
+        <div className='cart'>
+            <Cart cart={cart} onAddToCart={handleAddToCart} />
+        </div>
     </div>
   )
 }
