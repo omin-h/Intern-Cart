@@ -17,6 +17,13 @@ const Upper = () => {
             totalPages={totalPages}
             onPageChange={handlePageChange}
             />
+
+        <div className='pagination'>
+            <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+            />
             </div>
 
             <div className='filter'>
@@ -39,6 +46,7 @@ const Upper = () => {
         <div className='cart'>
             <Cart cart={cart} onAddToCart={handleAddToCart} />
         </div>
+
     </div>
   )
 }
