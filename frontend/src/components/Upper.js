@@ -11,40 +11,17 @@ const Upper = () => {
 
         </div>
 
-        <div className='pagination'>
-            <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
-            />
-
-        <div className='pagination'>
-            <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
-            />
+        <div className='upperDiv'>
+            <div className='upperDiv1'>
+                <h1>Shop</h1>
+                <p>Home</p>
+                <p>Shop</p>
             </div>
-
-            <div className='filter'>
-            <Filter
-            categories={categories}
-            selectedCategory={selectedCategory}
-            onCategorySelect={handleCategorySelect}
-            />
-        </div>
-
-        <div className='sort'>
-            <Sort onSort={handleSort} />
-        </div>
-
-        <div className='cart'>
-            <Cart cart={cart} onAddToCart={handleAddToCart} />
-
-        </div>
-
-        <div className='cart'>
-            <Cart cart={cart} onAddToCart={handleAddToCart} />
+            <div className='upperDiv2'>
+                <h1>Shop</h1>
+                <p>Home</p>
+                <p>Shop</p>
+            </div>
         </div>
 
     </div>
