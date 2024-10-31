@@ -24,6 +24,19 @@ const Upper = () => {
             </div>
         </div>
 
+        <div className='upperDiv'>
+            <div className='upperDiv1'>
+                <h1>Shop</h1>
+                <p>Home</p>
+                <p>Shop</p>
+            </div>
+            <div className='upperDiv2'>
+                <h1>Shop</h1>
+                <p>Home</p>
+                <p>Shop</p>
+            </div>
+        </div>
+
     </div>
   )
 }
