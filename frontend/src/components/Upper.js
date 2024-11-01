@@ -37,6 +37,12 @@ const Upper = () => {
             </div>
         </div>
 
+        <div className='search'>
+            <input type='text' placeholder='Search for products' />
+            <button>Search</button>
+
+        </div>
+
     </div>
   )
 }
