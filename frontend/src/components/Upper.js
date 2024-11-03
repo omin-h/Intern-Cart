@@ -43,6 +43,20 @@ const Upper = () => {
 
         </div>
 
+        <div className='bypass'>
+            <div className='bypass1'>
+                <h1>Shop</h1>
+                <p>Home</p>
+                <p>Shop</p>
+            </div>
+            <div className='bypass2'>
+                <h1>Shop</h1>
+                <p>Home</p>
+                <p>Shop</p>
+            </div>
+            </div>
+
+
     </div>
   )
 }
